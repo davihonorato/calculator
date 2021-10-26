@@ -1,6 +1,13 @@
 function insert(num) {
     let result = document.getElementById('resultado').value;
-    document.getElementById('resultado').value = result + num;
+    let last = result.slice(-1);
+    let symbol = ["/", "*", "-", "+", "."];
+
+    if (symbol.includes(last) && symbol.includes(num)) {
+        document.getElementById('resultado').value = result;
+    } else {
+        document.getElementById('resultado').value = result + num;
+    }
 }
 
 function clearAll() {
