@@ -10,38 +10,40 @@
 <body>
     <section>
         <div class="container">
-            <input type="text" value="0">
+            <input type="text" id="resultado" placeholder="0" value="">
             <table>
                 <tr>
-                    <td><input type="button" value="C"></td>
-                    <td><input type="button" value="<"></td>
-                    <td><input type="button" value="÷"></td>
-                    <td><input type="button" value="×"></td>
+                    <td><input type="button" onclick="clearAll()" value="C"></td>
+                    <td><input type="button" onclick="del()" value="<"></td>
+                    <td><input type="button" onclick="insert('/')" value="÷"></td>
+                    <td><input type="button" onclick="insert('*')" value="×"></td>
                 </tr>
                 <tr>
-                    <td><input type="button" value="7"></td>
-                    <td><input type="button" value="8"></td>
-                    <td><input type="button" value="9"></td>
-                    <td><input type="button" value="-"></td>
+                    <td><input type="button" onclick="insert('7')" value="7"></td>
+                    <td><input type="button" onclick="insert('8')" value="8"></td>
+                    <td><input type="button" onclick="insert('9')" value="9"></td>
+                    <td><input type="button" onclick="insert('-')" value="-"></td>
                 </tr>
                 <tr>
-                    <td><input type="button" value="4"></td>
-                    <td><input type="button" value="5"></td>
-                    <td><input type="button" value="6"></td>
-                    <td><input type="button" value="+"></td>
+                    <td><input type="button" onclick="insert('4')" value="4"></td>
+                    <td><input type="button" onclick="insert('5')" value="5"></td>
+                    <td><input type="button" onclick="insert('6')" value="6"></td>
+                    <td><input type="button" onclick="insert('+')" value="+"></td>
                 </tr>
                 <tr>
-                    <td><input type="button" value="1"></td>
-                    <td><input type="button" value="2"></td>
-                    <td><input type="button" value="3"></td>
-                    <td rowspan="2"><input style="height: 104px;" type="button" value="="></td>
+                    <td><input type="button" onclick="insert('1')" value="1"></td>
+                    <td><input type="button" onclick="insert('2')" value="2"></td>
+                    <td><input type="button" onclick="insert('3')" value="3"></td>
+                    <td rowspan="2"><input style="height: 104px;" type="button" onclick="calculate()" value="="></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><input style="width: 104px;" type="button" value="0"></td>
-                    <td><input type="button" value="."></td>
+                    <td colspan="2"><input style="width: 104px;" type="button" onclick="insert('0')" value="0"></td>
+                    <td><input type="button" onclick="insert('.')" value="."></td>
                 </tr>
             </table>
         </div>
     </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
